@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="apple-touch-fullscreen" content="no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title></title>
+
+    <!-- injector:css -->
+    <link rel="stylesheet" href="assets/stylesheets/main.css"/>
+    <!-- endinjector -->
+</head>
+<body>
+
+<!-- scene -->
+<div class="scene-wrap">
+    <!-- loading -->
+    <div class="loading">
+        <canvas id="loading" width="375" height="376"></canvas>
+
+        <div class="numbers">
+            <span class="number hundred"></span><span class="number ten"></span><span class="number single"></span><span class="percent"></span>
+        </div>
+    </div>
+    <!-- end loading -->
+
+    <!-- canvas -->
+    <div class="scene-container">
+        <canvas id="scene" class="scene" width="375" height="593"></canvas>
+    </div>
+    <div class="title-wrap">
+        <canvas id="title" width="330" height="40"></canvas>
+    </div>
+
+    <div id="scene-touch-area"></div>
+    <!-- end canvas -->
+
+    <!-- tips arrow -->
+    <div class="tips-arrow">
+        <img src="assets/images/tips-arrow.png" alt="" width="264"/>
+    </div>
+    <!-- end tips arrow -->
+
+    <!-- main title -->
+    <img class="title" src="assets/images/title.png" alt="中国人的那张桌"/>
+    <!-- end main title -->
+
+    <!-- scene text -->
+    <div class="para para01">
+        <img class="desc" src="assets/images/xiangqi01.png" alt=""/>
+    </div>
+
+    <div class="para para02">
+        <img class="desc" src="assets/images/dizhu01.png" alt=""/>
+    </div>
+
+    <div class="para para03">
+        <img class="desc" src="assets/images/majiang01.png" alt=""/>
+    </div>
+
+    <div class="para para04">
+        <img class="desc" src="assets/images/puke01.png" alt=""/>
+    </div>
+    <!-- end scene text -->
+
+    <!-- share -->
+    <div class="share">
+        <img class="text" src="assets/images/share.png" alt="" width="375" />
+        <img class="duff" src="assets/images/share-duff.png" alt="" width="429" />
+        <span class="btn btn01">选择桌子</span>
+        <span class="btn btn02">分享快乐</span>
+    </div>
+    <!-- end share -->
+</div>
+<!-- end scene -->
+
+<audio id="audio" src="assets/audio/music.mp3" loop="loop"></audio>
+<audio id="audio1" src="assets/audio/effect01.mp3"></audio>
+<audio id="audio2" src="assets/audio/effect02.mp3"></audio>
+<audio id="audio3" src="assets/audio/effect03.mp3"></audio>
+<audio id="audio4" src="assets/audio/effect04.mp3"></audio>
+<audio id="audio5" src="assets/audio/effect05.mp3"></audio>
+
+<!-- injector:js -->
+<!-- page -->
+
+<script src="assets/scripts/pageResponse.min.js"></script>
+<script src="assets/scripts/main.js"></script>
+
+<!-- less compiler -->
+
+<!-- endinjector -->
+</body>
+</html>

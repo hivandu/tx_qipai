@@ -1,0 +1,231 @@
+/*======================================================================
+      Global
+  ======================================================================*/
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+html {
+  height: 100%;
+  font-family: "microsoft yahei", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0  auto;
+  background: url("../images/bg-expand.jpg") center center;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+p,
+a,
+button,
+span {
+  -webkit-font-smoothing: antialiased;
+}
+input {
+  outline: none;
+}
+/* scene */
+.scene-wrap {
+  position: relative;
+}
+.scene-wrap .title {
+  opacity: 0;
+}
+.scene-wrap.active .title {
+  opacity: 1;
+}
+/* loading */
+.loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../images/bg-loading.jpg") no-repeat;
+  background-size: cover;
+  z-index: 300;
+  transition: all 2s .6s;
+}
+.loading .numbers {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 357.5px;
+  padding: 0 0 0 10px;
+  text-align: center;
+}
+.loading .number {
+  display: inline-block;
+  font-size: 0;
+  width: 18px;
+  height: 35.5px;
+  vertical-align: middle;
+  background: url("../images/loading-numbers.png") no-repeat;
+  background-size: 215px 35.5px;
+}
+.loading .percent {
+  display: inline-block;
+  font-size: 0;
+  width: 24.5px;
+  height: 32px;
+  vertical-align: middle;
+  background: url("../images/loading-percent.png") no-repeat;
+  background-size: 100% 100%;
+}
+.loading .hundred {
+  display: none;
+  background-position-x: -21.5px;
+}
+.loading .single {
+  background-position-x: -21.5px;
+}
+.loading.complete {
+  opacity: 0;
+}
+.scene-container {
+  background: url("../images/bg-main.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.scene-container #scene {
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+.scene-container.active #scene {
+  opacity: 1;
+}
+/* animate scene title */
+.title-wrap {
+  position: absolute;
+  left: 22px;
+  top: 38.5px;
+  width: 330px;
+  height: 41px;
+  padding: 2px;
+  background: url("../images/bg-title.png") no-repeat;
+  background-size: 100% 100%;
+}
+#scene-touch-area {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+/* tips arrow */
+.tips-arrow {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 26%;
+  text-align: center;
+  z-index: 8;
+  opacity: 0;
+  transform: scale(0.4);
+}
+.tips-arrow img {
+  vertical-align: top;
+}
+.tips-arrow.active {
+  -webkit-animation: flash 1.2s .3s 3;
+}
+/* main title */
+.title {
+  position: absolute;
+  left: 0;
+  top: 535px;
+  width: 100%;
+  z-index: 90;
+}
+/* scene para */
+.para {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+.para img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+.para .desc {
+  top: 17.7%;
+}
+.para .title {
+  top: auto;
+  bottom: 3.3%;
+  display: none;
+}
+.para.active {
+  opacity: 1;
+}
+/* share page */
+.share {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background: url("../images/bg-share.jpg") no-repeat;
+  background-size: 100% 100%;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.share .btn {
+  overflow: hidden;
+  position: absolute;
+  bottom: 21px;
+  width: 157.5px;
+  height: 44px;
+  text-indent: -200px;
+}
+.share .btn01 {
+  left: 24.5px;
+}
+.share .btn02 {
+  right: 21px;
+}
+.share .text {
+  position: absolute;
+  left: 0;
+  top: 28.2%;
+}
+.share .duff {
+  position: absolute;
+  left: 0;
+  top: 16.5%;
+  opacity: 0;
+  transform: scale(0);
+  transition: all .6s ease;
+}
+.share.active {
+  opacity: 1;
+  z-index: 100;
+}
+.share.active .duff {
+  opacity: 1;
+  transform: scale(1);
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+/*======================================================================
+      Responsive
+  ======================================================================*/
